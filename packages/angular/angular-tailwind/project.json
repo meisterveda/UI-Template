@@ -5,9 +5,7 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/angular/angular-tailwind",
         "index": "packages/angular/angular-tailwind/src/index.html",
@@ -18,9 +16,7 @@
           "packages/angular/angular-tailwind/src/favicon.ico",
           "packages/angular/angular-tailwind/src/assets"
         ],
-        "styles": [
-          "packages/angular/angular-tailwind/src/styles.css"
-        ],
+        "styles": ["packages/angular/angular-tailwind/src/styles.css"],
         "scripts": []
       },
       "configurations": {
@@ -85,12 +81,43 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/packages/angular/angular-tailwind"
-      ],
+      "outputs": ["coverage/packages/angular/angular-tailwind"],
       "options": {
         "jestConfig": "packages/angular/angular-tailwind/jest.config.ts",
         "passWithNoTests": true
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "port": 4400,
+        "config": {
+          "configFolder": "packages/angular/angular-tailwind/.storybook"
+        },
+        "projectBuildConfig": "angular-angular-tailwind"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "outputPath": "dist/storybook/angular-angular-tailwind",
+        "config": {
+          "configFolder": "packages/angular/angular-tailwind/.storybook"
+        },
+        "projectBuildConfig": "angular-angular-tailwind"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
       }
     }
   },
