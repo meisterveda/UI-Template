@@ -4,6 +4,8 @@
     "angular-angular-material": "packages/angular/angular-material",
     "angular-angular-material-e2e": "packages/angular/angular-material-e2e",
     "angular-angular-tailwind": "packages/angular/angular-tailwind",
-    "angular-angular-tailwind-e2e": "packages/angular/angular-tailwind-e2e"
+    "angular-angular-tailwind-e2e": "packages/angular/angular-tailwind-e2e",
+    "nextjs-next-tailwind": "packages/nextjs/next-tailwind",
+    "nextjs-next-tailwind-e2e": "packages/nextjs/next-tailwind-e2e"
   }
 }

@@ -34,6 +34,17 @@
     },
     "@nrwl/angular:component": {
       "style": "css"
+    },
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
     }
   },
   "defaultProject": "angular-angular-tailwind"
