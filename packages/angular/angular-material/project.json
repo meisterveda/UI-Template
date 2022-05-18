@@ -5,9 +5,7 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/angular/angular-material",
         "index": "packages/angular/angular-material/src/index.html",
@@ -86,12 +84,43 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/packages/angular/angular-material"
-      ],
+      "outputs": ["coverage/packages/angular/angular-material"],
       "options": {
         "jestConfig": "packages/angular/angular-material/jest.config.ts",
         "passWithNoTests": true
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "port": 4400,
+        "config": {
+          "configFolder": "packages/angular/angular-material/.storybook"
+        },
+        "projectBuildConfig": "angular-angular-material"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "outputPath": "dist/storybook/angular-angular-material",
+        "config": {
+          "configFolder": "packages/angular/angular-material/.storybook"
+        },
+        "projectBuildConfig": "angular-angular-material"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
       }
     }
   },
