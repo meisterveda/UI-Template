@@ -1,17 +1,17 @@
 {
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/angular/angular-tailwind-e2e/src",
+  "sourceRoot": "packages/angular/angular-material-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "packages/angular/angular-tailwind-e2e/cypress.json",
-        "devServerTarget": "angular-angular-tailwind:serve:development"
+        "cypressConfig": "packages/angular/angular-material-e2e/cypress.json",
+        "devServerTarget": "angular-angular-material:serve:development"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "angular-angular-tailwind:serve:production"
+          "devServerTarget": "angular-angular-material:serve:production"
         }
       }
     },
@@ -22,13 +22,13 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "packages/angular/angular-tailwind-e2e/**/*.{js,ts}"
+          "packages/angular/angular-material-e2e/**/*.{js,ts}"
         ]
       }
     }
   },
   "tags": [],
   "implicitDependencies": [
-    "angular-angular-tailwind"
+    "angular-angular-material"
   ]
 }
