@@ -1,4 +1,9 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "angular-angular-material": "packages/angular/angular-material",
+    "angular-angular-material-e2e": "packages/angular/angular-material-e2e",
+    "angular-angular-tailwind": "packages/angular/angular-tailwind",
+    "angular-angular-tailwind-e2e": "packages/angular/angular-tailwind-e2e"
+  }
 }
